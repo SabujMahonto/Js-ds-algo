@@ -34,3 +34,17 @@ for( let i = 1; i <=n; i++){   // 1 time executing
     }
 }
 
+// 3 nested for loop  == O(n^3) -cubic
+let n2 = 20;
+for(let i = 1; i <= n2; i++){
+    for(let j = 1; j <= n2; j++){
+        for(let k = 1; k <= n2 ; k++){
+            console.log(i, j, k);
+        }
+    }
+}
+
+// O(1) -- best
+// O(n)--- Okay
+// O(n^2) -- avoid
+// O(n^3) -- avoid
