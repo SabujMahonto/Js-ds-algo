@@ -18,4 +18,12 @@ function sum(arr){
    return sum;                          //  executing time  =   1 
 }                                                                                                  
 
-console.log(sum(arr)); // O(n) -linear time  complexity
+console.log(sum(arr)); // O(n) -linear time  complexity or space complexity
+
+
+function sum1(num1, num2){
+    return num1 + num2
+}
+
+console.log(sum1(10,20)); // O(1)  -constant time complexity
+
