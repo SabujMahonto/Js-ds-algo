@@ -27,3 +27,10 @@ function sum1(num1, num2){
 
 console.log(sum1(10,20)); // O(1)  -constant time complexity
 
+let n = 10;
+for( let i = 1; i <=n; i++){   // 1 time executing 
+    for( let j = 1; j <= n; j++){ // 10 times executing 
+        console.log(i, j);        // O(n^2) -Quadratic time complexity
+    }
+}
+
