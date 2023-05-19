@@ -78,6 +78,7 @@ for (let i = 1; i <= n; i++) {
 // fibonacci(6) --> (0,1,2,3,5,8)
 // fibonacci(7) --> (0,1,2,3,5,8,13)
 // fibonacci(8) --> (0,1,2,3,5,8,13,21)
+
 // n = (n-1) + (n-2)
 // i = (i-1) + (i-2)
 
@@ -88,4 +89,31 @@ function fibonacci(n) {
   }
   return fibo;
 }
+
 console.log(fibonacci(4));
+
+// time complexity  O(n);
+
+// factorial
+// n! = n (n-1)
+// 8! = 8 (8 -1)!
+// = 8! = 8 * 7!
+// 0! --> 1;
+// 5! --> 5 * 4 * 3 * 2 * 1
+// 5! --> 5 * 4!
+// 6! --> 6 * 5 * 4 * 3 * 2 * 1
+// 7! --> 7 * 6!
+
+function factorial(n) {
+  let fact = 1;
+  for (let i = 1; i <= n; i++) {
+    fact = fact * i;
+  }
+  return fact;
+}
+console.log(factorial(1));
+console.log(factorial(2));
+console.log(factorial(3));
+console.log(factorial(0));
+console.log(factorial(6));
+console.log(factorial(7));
