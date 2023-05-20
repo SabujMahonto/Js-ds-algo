@@ -153,3 +153,20 @@ console.log(powerOfTwo(5));
 console.log(powerOfTwo(9));
 console.log(powerOfTwo(16));
 // time complexity logarithmic O(logn)
+
+// unit step
+// x = n
+// y = [1,1,1,1,1,1,.....n]
+function unitStep(n) {
+  y = [];
+  for (let i = 0; i <= n; i++) {
+    y.push(1);
+  }
+  return y;
+}
+
+console.log(unitStep(2));
+console.log(unitStep(6));
+console.log(unitStep(3));
+console.log(unitStep(5));
+console.log(unitStep(10));
