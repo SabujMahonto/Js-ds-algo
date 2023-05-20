@@ -185,3 +185,19 @@ function unitRamp(n) {
 
 console.log(unitRamp(5));
 console.log(unitRamp(10));
+
+// unit impulse
+// x = 0
+// y = 1 otherwise 0
+// y = [1,0,0,0,0,...n]
+function unitImpulse(n) {
+  y = [];
+  for (let i = 0; i <= n; i++) {
+    if (i === 0) y.push(1);
+    else y.push(0);
+  }
+  return y;
+}
+
+console.log(unitImpulse(2));
+console.log(unitImpulse(10));
