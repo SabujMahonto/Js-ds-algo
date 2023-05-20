@@ -134,3 +134,22 @@ console.log(isPrime(8));
 console.log(isPrime(3));
 console.log(isPrime(1));
 // time complexity linear O(n)
+
+//power of two
+function powerOfTwo(num) {
+  if (num < 1) return false;
+  while (num > 1) {
+    if (num % 2 !== 0) return false;
+    num = num / 2;
+  }
+  return true;
+}
+console.log("power of two");
+console.log(powerOfTwo(1));
+console.log(powerOfTwo(2));
+console.log(powerOfTwo(3));
+console.log(powerOfTwo(4));
+console.log(powerOfTwo(5));
+console.log(powerOfTwo(9));
+console.log(powerOfTwo(16));
+// time complexity logarithmic O(logn)
