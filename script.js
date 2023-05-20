@@ -170,3 +170,18 @@ console.log(unitStep(6));
 console.log(unitStep(3));
 console.log(unitStep(5));
 console.log(unitStep(10));
+
+// unit ramp
+// x = n
+// y = [1,2,3,4,......n]
+
+function unitRamp(n) {
+  let y = [];
+  for (let i = 0; i <= n; i++) {
+    y.push(i);
+  }
+  return y;
+}
+
+console.log(unitRamp(5));
+console.log(unitRamp(10));
