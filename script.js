@@ -201,3 +201,30 @@ function unitImpulse(n) {
 
 console.log(unitImpulse(2));
 console.log(unitImpulse(10));
+
+// trapping rain water
+
+function trappingRainWater(height) {
+  let water = 0;
+  let leftMax = -1;
+  let rightMax = -1;
+  let leftIndex = 0;
+  let rightIndex = height.length - 1;
+  if (height.length < 3) return water;
+  while (leftIndex <= rightIndex) {
+    leftMax = height[leftIndex] > leftMax ? height[leftIndex] : leftMax;
+    rightMax = height[rightIndex] > rightMax ? height[rightIndex] : rightMax;
+
+    if (leftMax > rightMax) {
+      water += rightMax - height[rightIndex];
+      rightIndex--;
+    } else {
+      water += leftMax - height[leftIndex];
+      leftIndex++;
+    }
+  }
+  return water;
+}
+
+console.log(trappingRainWater([5, 3, 4, 7, 3]));
+console.log(trappingRainWater([5, 3, 4, 7, 3, 11, 5, 7, 6, 4, 3, 1, 5, 7]));
