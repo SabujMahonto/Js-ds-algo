@@ -228,3 +228,18 @@ function trappingRainWater(height) {
 
 console.log(trappingRainWater([5, 3, 4, 7, 3]));
 console.log(trappingRainWater([5, 3, 4, 7, 3, 11, 5, 7, 6, 4, 3, 1, 5, 7]));
+
+// Recursion
+//part
+//best case
+//fibonacci
+
+// recursive Fibonacci
+
+function recursiveFibonacci(n) {
+  if (n < 2) return n;
+
+  const recursive = recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
+  return recursive;
+}
+console.log(recursiveFibonacci(3));
