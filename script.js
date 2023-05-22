@@ -267,3 +267,22 @@ console.log(recursiveFactorial(6));
 console.log(recursiveFactorial(4));
 console.log(recursiveFactorial(8));
 // time complexity  == O(n) linear
+
+// search Algorithm
+// arr[22,23,54,22,12] 54 ---> 2;
+// arr[22,23,53,22,12] 55 ---> -1;
+// arr[22,23,53,22,12] 12 ---> 4;
+
+//  linear search algo
+function linearSearch(arr, target) {
+  for (let i = 0; i <= arr.length - 1; i++) {
+    if (arr.at(i) === target) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+console.log(linearSearch([22, 23, 54, 22, 12], 54));
+console.log(linearSearch([22, 23, 53, 22, 12], 55));
+console.log(linearSearch([22, 23, 53, 22, 12], 12));
