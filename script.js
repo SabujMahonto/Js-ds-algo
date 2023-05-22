@@ -232,8 +232,7 @@ console.log(trappingRainWater([5, 3, 4, 7, 3, 11, 5, 7, 6, 4, 3, 1, 5, 7]));
 // Recursion
 //part
 //best case
-//fibonacci
-
+// [0,1,1,2,,3,5,8,13.....n]
 // recursive Fibonacci
 
 function recursiveFibonacci(n) {
@@ -242,4 +241,29 @@ function recursiveFibonacci(n) {
   const recursive = recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
   return recursive;
 }
-console.log(recursiveFibonacci(3));
+// console.log(recursiveFibonacci(3));
+// time complexity  = O(2^n)
+// factorial
+// 1! = 1!
+// 4! = 4*3*2
+// 6! = 6 * 5!
+// n! = n(n -1)!
+// n
+// (n-1)
+// n === 0 // 1
+
+// recursive factorial
+
+function recursiveFactorial(n) {
+  if (n === 0) return 1;
+  return n * recursiveFactorial(n - 1);
+}
+
+console.log(recursiveFactorial(0));
+console.log(recursiveFactorial(1));
+console.log(recursiveFactorial(2));
+console.log(recursiveFactorial(3));
+console.log(recursiveFactorial(6));
+console.log(recursiveFactorial(4));
+console.log(recursiveFactorial(8));
+// time complexity  == O(n) linear
