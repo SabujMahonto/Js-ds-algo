@@ -286,3 +286,39 @@ function linearSearch(arr, target) {
 console.log(linearSearch([22, 23, 54, 22, 12], 54));
 console.log(linearSearch([22, 23, 53, 22, 12], 55));
 console.log(linearSearch([22, 23, 53, 22, 12], 12));
+// time complexity  == O(n) linear
+
+//binary Search
+
+// function binarySearch(arr, target) {
+//   let left = 0;
+//   let right = arr.length - 1;
+//   while (left <= right) {
+//     let mid = Math.floor(left + right) / 2;
+//     if (arr[mid] === target) return mid;
+//     if (arr[mid] < target) left = mid + 1;
+//     else right = mid - 1;
+//   }
+//   return -1;
+// }
+function binarySearch(arr, target) {
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+
+    if (arr[mid] === target) {
+      return mid;
+    } else if (arr[mid] < target) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  return -1; // Target element not found
+}
+console.log(binarySearch([22, 23, 54, 22, 12], 54));
+console.log(binarySearch([22, 23, 53, 22, 12], 55));
+console.log(binarySearch([22, 23, 53, 22, 12], 22));
